@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="619.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.pos.controller.ProductMainFormController">
+   <children>
+      <Label layoutX="32.0" layoutY="21.0" prefHeight="27.0" prefWidth="215.0" text="Product Management" textFill="#3498db">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="32.0" layoutY="53.0" prefHeight="11.0" prefWidth="981.0" />
+      <Button layoutX="876.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnBackToHome" prefHeight="30.0" prefWidth="141.0" style="-fx-background-color: #e74c3c;" text="Back To Home" textFill="#f5f3f3">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane layoutX="32.0" layoutY="85.0" prefHeight="520.0" prefWidth="392.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <TextField fx:id="txtProductCode" editable="false" layoutX="14.0" layoutY="43.0" prefHeight="30.0" prefWidth="130.0" promptText="Product Code">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Button layoutX="239.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnAddNewProductOnAction" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #2980b9;" text="+ New Product" textFill="#f5f3f3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextArea fx:id="txtProductDescription" layoutX="14.0" layoutY="82.0" prefHeight="89.0" prefWidth="346.0" promptText="Description">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="btnSave" layoutX="128.0" layoutY="181.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: #2980b9;" text="Save Product" textFill="#f5f3f3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="txtSearch" alignment="CENTER" layoutX="23.0" layoutY="233.0" prefHeight="30.0" prefWidth="346.0" promptText="Search Product By Id">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="tblProduct" layoutX="23.0" layoutY="280.0" prefHeight="229.0" prefWidth="346.0">
+              <columns>
+                <TableColumn fx:id="colProductId" prefWidth="75.0" text="Code" />
+                <TableColumn fx:id="colDescription" prefWidth="106.0" text="Description" />
+                  <TableColumn fx:id="colShowMore" prefWidth="84.0" text="Show More" />
+                  <TableColumn fx:id="colDelete" text="Delete" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="441.0" layoutY="85.0" orientation="VERTICAL" prefHeight="494.0" prefWidth="5.0" />
+      <TextField fx:id="txtSelectedProductCode" editable="false" layoutX="463.0" layoutY="97.0" prefHeight="30.0" prefWidth="167.0" promptText="Selected Product Code">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="newBatchBtn" disable="true" layoutX="888.0" layoutY="97.0" mnemonicParsing="false" onAction="#btnAddNewBatchOnAction" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #2980b9;" text="+ New Batch" textFill="#f5f3f3">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextArea fx:id="txtSelectedDescription" editable="false" layoutX="463.0" layoutY="145.0" prefHeight="102.0" prefWidth="554.0" promptText="Description" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <TableView fx:id="tblProductMain" layoutX="470.0" layoutY="282.0" prefHeight="320.0" prefWidth="547.0">
+        <columns>
+          <TableColumn fx:id="colNo" prefWidth="75.0" text="#" />
+          <TableColumn fx:id="colQty" prefWidth="75.0" text="QTY" />
+            <TableColumn fx:id="colBuyingPrice" prefWidth="75.0" text="Buying Price" />
+            <TableColumn fx:id="colDiscount" prefWidth="75.0" text="D. Available" />
+            <TableColumn fx:id="colShowPrice" prefWidth="75.0" text="Show Price" />
+            <TableColumn fx:id="colSellingPrice" prefWidth="75.0" text="Selling Price" />
+            <TableColumn fx:id="colMainDelete" prefWidth="97.0" text="Delete" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

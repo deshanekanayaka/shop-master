@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="context" prefHeight="474.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.pos.controller.NewBatchFormController">
+    <children>
+        <Label layoutX="42.0" layoutY="31.0" prefHeight="27.0" prefWidth="215.0" text="Batch Management" textFill="#3498db">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Separator layoutX="42.0" layoutY="63.0" prefHeight="11.0" prefWidth="388.0" />
+        <ImageView fx:id="imgQR" fitHeight="196.0" fitWidth="198.0" layoutX="42.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
+        <TextField fx:id="txtQTy" editable="false" layoutX="257.0" layoutY="85.0" prefHeight="30.0" prefWidth="175.0" promptText="QTY">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtBuyingPrice" editable="false" layoutX="257.0" layoutY="129.0" prefHeight="30.0" prefWidth="175.0" promptText="Buying Price">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtShowPrice" editable="false" layoutX="257.0" layoutY="177.0" prefHeight="30.0" prefWidth="175.0" promptText="Show Price">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtSellingPrice" editable="false" layoutX="257.0" layoutY="224.0" prefHeight="30.0" prefWidth="175.0" promptText="Selling Price">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </TextField>
+        <Label layoutX="264.0" layoutY="273.0" text="Discount" textFill="#4b08da">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="rdNo" layoutX="338.0" layoutY="275.0" mnemonicParsing="false" selected="true" text="No" textFill="#3009bc">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+            <toggleGroup>
+                <ToggleGroup fx:id="discount" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="rdYes" layoutX="393.0" layoutY="275.0" mnemonicParsing="false" text="Yes" textFill="#3009bc" toggleGroup="$discount">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </RadioButton>
+        <TextField fx:id="txtProductCode" editable="false" layoutX="42.0" layoutY="301.0" prefHeight="30.0" prefWidth="215.0" promptText="Product Code">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </TextField>
+        <TextArea fx:id="txtDescription" layoutX="41.0" layoutY="342.0" prefHeight="101.0" prefWidth="225.0" promptText="Product Description">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </TextArea>
+        <Button fx:id="btnSave" layoutX="324.0" layoutY="402.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: #2980b9;" text="Save Batch" textFill="#f5f3f3">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+    </children>
+</AnchorPane>
