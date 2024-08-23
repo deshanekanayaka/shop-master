@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="context" prefHeight="474.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.pos.controller.NewBatchFormController">
     <children>
         <Label layoutX="42.0" layoutY="31.0" prefHeight="27.0" prefWidth="215.0" text="Batch Management" textFill="#3498db">
@@ -22,22 +21,22 @@
         </Label>
         <Separator layoutX="42.0" layoutY="63.0" prefHeight="11.0" prefWidth="388.0" />
         <ImageView fx:id="imgQR" fitHeight="196.0" fitWidth="198.0" layoutX="42.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
-        <TextField fx:id="txtQTy" editable="false" layoutX="257.0" layoutY="85.0" prefHeight="30.0" prefWidth="175.0" promptText="QTY">
+        <TextField fx:id="txtQTy" layoutX="257.0" layoutY="85.0" prefHeight="30.0" prefWidth="175.0" promptText="QTY">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtBuyingPrice" editable="false" layoutX="257.0" layoutY="129.0" prefHeight="30.0" prefWidth="175.0" promptText="Buying Price">
+        <TextField fx:id="txtBuyingPrice" layoutX="257.0" layoutY="129.0" prefHeight="30.0" prefWidth="175.0" promptText="Buying Price">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtShowPrice" editable="false" layoutX="257.0" layoutY="177.0" prefHeight="30.0" prefWidth="175.0" promptText="Show Price">
+        <TextField fx:id="txtShowPrice" layoutX="257.0" layoutY="177.0" prefHeight="30.0" prefWidth="175.0" promptText="Show Price">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtSellingPrice" editable="false" layoutX="257.0" layoutY="224.0" prefHeight="30.0" prefWidth="175.0" promptText="Selling Price">
+        <TextField fx:id="txtSellingPrice" layoutX="257.0" layoutY="224.0" prefHeight="30.0" prefWidth="175.0" promptText="Selling Price">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>

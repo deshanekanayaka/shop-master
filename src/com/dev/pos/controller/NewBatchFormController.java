@@ -60,7 +60,6 @@ public class NewBatchFormController {
         imgQR.setImage(image);
 
 
-
     }
 
     public void setProductCode(int code, String description) {
@@ -69,29 +68,32 @@ public class NewBatchFormController {
 
     }
 
-    private void loadBatch(BatchBo batchBo) {}
+    private void loadBatch(BatchBo batchBo) {
+
+    }
 
     public void btnSaveOnAction(ActionEvent actionEvent) {
 
         try {
-            if (btnSave.getText().equalsIgnoreCase(" save batch")) {
+            if (btnSave.getText().equalsIgnoreCase("save batch")) {
                 boolean isSaved = batchBo.saveBatch(
                         new BatchDTO(
-                                imgQR.getId(),
+
+                                "1",
                                 txtProductCode.getText(),
                                 Integer.parseInt(txtQTy.getText()),
-                                Double.parseDouble(txtSellingPrice.getText()),
+                                Double.valueOf(txtSellingPrice.getText()),
                                 rdNo.isSelected(),
-                                Double.parseDouble(txtShowPrice.getText()),
-                                Double.parseDouble(txtBuyingPrice.getText()),
-                                Integer.parseInt(txtProductCode.getText())
+                                Double.valueOf(txtShowPrice.getText()),
+                                Double.valueOf(txtBuyingPrice.getText()),
+                                Integer.valueOf(txtProductCode.getText())
 
                         )
                 );
                 if (isSaved) {
                     new Alert(Alert.AlertType.INFORMATION, "Batch saved successfully").show();
                 } else
-                    new Alert(Alert.AlertType.ERROR, "Batch save failed").show();
+                    new Alert(Alert.AlertType.INFORMATION, "Batch save failed").show();
             }
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
